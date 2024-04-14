@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Blue Star Network, where seamless connectivity meets exceptional services."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+    
+
+    <title>Pay Now &mdash; Blue Star Network</title>
+  </head>
+  <body>
+    
+    <header class="header">
+      <a href="#">
+        <img class="logo" alt="BSN logo" src="img/BSN-logo.png" />
+      </a>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+        <section class="section-pricing" id="pricing">
+    <div class="container">
+      <h2 class="heading-secondary">
+        Use Internet at reasonable  Price
+      </h2>
+    </div>
+
+    <div class="container grid grid--2-cols margin-bottom-md">
+      <div class="pricing-plan pricing-plan--starter">
+        <header class="plan-header">
+          <p class="plan-name">Total Cost</p>
+          <p class="plan-price"><div class= "plan-price" id="result"></div></p>
+        </header>
+        
+        <div class="plan-sing-up">
+          <a href="Payment.html" class="btn btn--full">Pay Now</a>
+        </div>
+      </div>
+
+      
+    <div class="container grid">
+      <aside class="plan-details">
+        Prices include all applicable taxes.
+      </aside>
+    </div>
+
+  </section>
+  </main>
+  <script>
+    // Retrieve user inputs from localStorage
+    var time = parseFloat(localStorage.getItem('time'));
+    var speed = parseFloat(localStorage.getItem('speed'));
+
+    function calculateCost() {
+        var costPerHour = 50; // Assuming cost per hour is $0.5
+        var cost = time * speed * costPerHour;
+        
+        document.getElementById('result').innerHTML = "<span>₹</span>" + cost.toFixed(2);
+    }
+
+    // Call calculateCost() function when the page loads
+    calculateCost();
+</script>
+  </body>
+  </html>
