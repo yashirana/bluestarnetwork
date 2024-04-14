@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Blue Star Network, where seamless connectivity meets exceptional services."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+    <script>
+      function submitForm() {
+            var time = document.getElementById('time').value;
+            var speed = document.getElementById('speed').value;
+
+            // Store user inputs in localStorage
+            localStorage.setItem('time', time);
+            localStorage.setItem('speed', speed);
+
+            // Navigate to the second HTML file
+            window.location.href = 'price.html';
+        }
+  </script>
+
+    <title>Blue Star Networks &mdash; Seamless Connection!</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img class="logo" alt="BSN logo" src="img/BSN-logo.png" />
+      </a>
+
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              Stay Connected in Today's Digital World
+            </h1>
+            <p class="hero-description">
+              Since 2024, we've been dedicated to providing reliable, high-speed internet solutions for homes and businesses alike.
+              <br>Join us and experience the firsthand.
+            </p>
+            <a href="#cta" class="btn btn--full margin-right-sm"
+              >Get Wifi Access</a
+            >
+
+            <a href="#how" class="btn btn--outline">Learn more about us &darr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-how" id="how">
+        <div class="container">
+          <span class="subheading">About Us</span>
+          <h2 class="heading-secondary">
+            Blue Star Network
+          </h2>
+        </div>
+
+        <div class="container grid grid--2-cols grid--center-v">
+          <div class="step-text-box">
+            <p class="step-description">
+              <br>
+              <br>
+              Welcome to Blue Star Network, where seamless connectivity meets exceptional service. Since 2024, we've been dedicated to providing reliable, high-speed internet solutions for homes and businesses alike. With a focus on innovation, customer satisfaction, and community impact, we're committed to delivering the best possible internet experience. From lightning-fast fiber-optic connections to personalized support from our expert team, Blue Star Network is your trusted partner for staying connected in today's digital world.
+            </p>
+          </div>
+
+          <div class="step-img-box">
+            <img
+              src="img/front_image.png"
+              class="step-img"
+              alt="iPhone app
+            preferences selection screen"
+            />
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get Internet access !</h2>
+              <p class="cta-text">
+                You have the option to utilize the internet within your allocated time constraints and at a reduced cost, according to your preferred speed.!
+              </p>
+
+              <form class="cta-form" name="sign-up" netlify>
+                <div>
+                  <label for="full-name">Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Enter your full name"
+                    name="full-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="time">Time</label>
+                  <input
+                    id="time"
+                    type="number"
+                    placeholder="Enter time limit(in hours)"
+                    name="time"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="speed">Speed</label>
+                  <input
+                    id="speed"
+                    type="number"
+                    placeholder="Enter speed limit(in mbps)"
+                    name="speed"
+                    required
+                  />
+                </div>
+
+                <a href="price.html" onclick="submitForm()" class="btn btn--full" >Calculate Price</a>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="People using wifi"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="Omnifood logo" src="img/BSN-logo.png" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Made with ❤️ by Blue_star_network Team
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              No 623, Shivaji Nagar, 4th Floor, Bangalore, Karnataka
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">+91 52525 35353</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@omnifood.com"
+                >bluestarnetwork@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
