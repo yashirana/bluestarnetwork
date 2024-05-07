@@ -90,7 +90,7 @@
     var speed = parseFloat(localStorage.getItem('speed'));
 
     function calculateCost() {
-        var costPerHour = 0.5; // Assuming cost per hour is 0.5
+        var costPerMin = 0.004; // Assuming cost per minute is 0.004
         var cost = time * speed * costPerHour;
         
         document.getElementById('result').innerHTML = "<span>₹</span>" + cost.toFixed(2);
