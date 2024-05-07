@@ -141,7 +141,7 @@
                   <input
                     id="time"
                     type="number"
-                    placeholder="Enter time limit(in hours)"
+                    placeholder="Enter time limit(in minutes)"
                     name="time"
                     required
                   />
@@ -149,13 +149,12 @@
 
                 <div>
                   <label for="speed">Speed</label>
-                  <input
-                    id="speed"
-                    type="number"
-                    placeholder="Enter speed limit(in mbps)"
-                    name="speed"
-                    required
-                  />
+                  <select id="speed" name="speed" required>
+                    <option value="">Select speed limit (in mbps)</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                  </select>
                 </div>
 
                 <a href="price.html" onclick="submitForm()" class="btn btn--full" >Calculate Price</a>
